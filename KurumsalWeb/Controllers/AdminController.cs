@@ -1,4 +1,5 @@
 ﻿using KurumsalWeb.Models;
+using KurumsalWeb.Models.DataContext;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,12 @@ namespace KurumsalWeb.Controllers
 {
     public class AdminController : Controller
     {
-        KurumsalDBEntities1 db = new KurumsalDBEntities1();
+        KurumsalDBContext db = new KurumsalDBContext();
         // GET: Admin
         public ActionResult Index()
         {
-            var sorgu = db.Kategoris.ToList();
+            var sorgu = db.Kategori.ToList();
+            
             return View(sorgu);
         }
     }

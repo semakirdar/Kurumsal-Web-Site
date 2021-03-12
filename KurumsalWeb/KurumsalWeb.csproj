@@ -595,16 +595,6 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
-    <Content Include="Models\KurumsalDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>KurumsalDB.edmx</DependentUpon>
-      <LastGenOutput>KurumsalDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\KurumsalDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>KurumsalDB.edmx</DependentUpon>
-      <LastGenOutput>KurumsalDB.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -665,13 +655,6 @@
     <Content Include="Content\AdminLayout\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\AdminLayout\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\AdminLayout\fonts\glyphicons-halflings-regular.woff" />
-    <EntityDeploy Include="Models\KurumsalDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>KurumsalDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\KurumsalDB.edmx.diagram">
-      <DependentUpon>KurumsalDB.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -688,45 +671,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Admin.cs">
-      <DependentUpon>KurumsalDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Blog.cs">
-      <DependentUpon>KurumsalDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Hakkimizda.cs">
-      <DependentUpon>KurumsalDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Hizmet.cs">
-      <DependentUpon>KurumsalDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Kategori.cs">
-      <DependentUpon>KurumsalDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Kimlik.cs">
-      <DependentUpon>KurumsalDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\KurumsalDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KurumsalDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\KurumsalDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KurumsalDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\KurumsalDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KurumsalDB.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>KurumsalDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\İletisim.cs">
-      <DependentUpon>KurumsalDB.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\DataContext\KurumsalDBContext.cs" />
+    <Compile Include="Models\Model\Admin.cs" />
+    <Compile Include="Models\Model\Blog.cs" />
+    <Compile Include="Models\Model\Hakkimizda.cs" />
+    <Compile Include="Models\Model\Hizmet.cs" />
+    <Compile Include="Models\Model\Kategori.cs" />
+    <Compile Include="Models\Model\Kimlik.cs" />
+    <Compile Include="Models\Model\Iletisim.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
