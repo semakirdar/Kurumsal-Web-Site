@@ -46,7 +46,6 @@ C:\Users\SEMA\source\repos\KurumsalWeb\KurumsalWeb\bin\System.Web.Webpages.Deplo
 C:\Users\SEMA\source\repos\KurumsalWeb\KurumsalWeb\bin\System.Web.Webpages.Razor.xml
 C:\Users\SEMA\source\repos\KurumsalWeb\KurumsalWeb\bin\System.Web.Helpers.xml
 C:\Users\SEMA\source\repos\KurumsalWeb\KurumsalWeb\bin\System.Web.Mvc.xml
-C:\Users\SEMA\source\repos\KurumsalWeb\KurumsalWeb\obj\Debug\KurumsalWeb.csprojAssemblyReference.cache
 C:\Users\SEMA\source\repos\KurumsalWeb\KurumsalWeb\obj\Debug\KurumsalWeb.csproj.CoreCompileInputs.cache
 C:\Users\SEMA\source\repos\KurumsalWeb\KurumsalWeb\obj\Debug\KurumsalWeb.csproj.CopyComplete
 C:\Users\SEMA\source\repos\KurumsalWeb\KurumsalWeb\obj\Debug\KurumsalWeb.dll
@@ -55,3 +54,4 @@ C:\Users\SEMA\source\repos\KurumsalWeb\KurumsalWeb\bin\EntityFramework.dll
 C:\Users\SEMA\source\repos\KurumsalWeb\KurumsalWeb\bin\EntityFramework.SqlServer.dll
 C:\Users\SEMA\source\repos\KurumsalWeb\KurumsalWeb\bin\EntityFramework.xml
 C:\Users\SEMA\source\repos\KurumsalWeb\KurumsalWeb\bin\EntityFramework.SqlServer.xml
+C:\Users\SEMA\source\repos\KurumsalWeb\KurumsalWeb\obj\Debug\KurumsalWeb.csprojAssemblyReference.cache
