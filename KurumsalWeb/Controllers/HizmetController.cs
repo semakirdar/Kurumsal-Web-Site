@@ -35,7 +35,7 @@ namespace KurumsalWeb.Controllers
                     WebImage img = new WebImage(ResimUrl.InputStream);
                     FileInfo imginfo = new FileInfo(ResimUrl.FileName);
 
-                    string logoname = ResimUrl.FileName + imginfo.Extension;
+                    string logoname = Guid.NewGuid().ToString() + imginfo.Extension;
                     img.Resize(500, 500);
                     img.Save("~/Uploads/Hizmet/" + logoname);
 
@@ -66,12 +66,13 @@ namespace KurumsalWeb.Controllers
             return View(hizmet);
         }
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Edit(int? id, Hizmet hizmet, HttpPostedFileBase ResimUrl)
         {
-            var h = db.Hizmet.Find(id);
+            
             if (ModelState.IsValid)
             {
-                
+                var h = db.Hizmet.Where(x => x.HizmetId == id).SingleOrDefault();
                 if (ResimUrl != null)
                 {
                     if (System.IO.File.Exists(Server.MapPath(h.ResimURL)))//daha önce yüklediğimiz rresim var mı kontrol et varsa sil
@@ -81,18 +82,35 @@ namespace KurumsalWeb.Controllers
                     WebImage img = new WebImage(ResimUrl.InputStream);
                     FileInfo imginfo = new FileInfo(ResimUrl.FileName);
 
-                    string logoname = ResimUrl.FileName + imginfo.Extension;
-                    img.Resize(300, 200);
-                    img.Save("~/Uploads/Kimlik/" + logoname);
+                    string hizmetname = Guid.NewGuid().ToString() + imginfo.Extension;
+                    img.Resize(500, 500);
+                    img.Save("~/Uploads/Hizmet/" + hizmetname);
 
-                    h.ResimURL = "/Uploads/Kimlik/" + logoname;
+                    h.ResimURL = "/Uploads/Hizmet/" + hizmetname;
                 }
-                db.Entry(hizmet).State = EntityState.Modified;
+                h.Baslik = hizmet.Baslik;
+                h.Aciklama = hizmet.Aciklama;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View();
 
+        }
+        public ActionResult Delete(int id)
+        {
+            if (id == null)
+            {
+                return HttpNotFound();
+            }
+            var h = db.Hizmet.Find(id);
+            if (h == null)
+            {
+                return HttpNotFound();
+            }
+            db.Hizmet.Remove(h); //hizmeti kaldır
+            db.SaveChanges(); //veritabanına kaydet
+            return RedirectToAction("Index");
+           
         }
     }
 }
