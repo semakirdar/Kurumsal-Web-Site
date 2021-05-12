@@ -1079,6 +1079,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105091447554_InitialCreate.cs" />
+    <Compile Include="Migrations\202105091447554_InitialCreate.Designer.cs">
+      <DependentUpon>202105091447554_InitialCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\KurumsalDBContext.cs" />
     <Compile Include="Models\Model\Admin.cs" />
@@ -1137,6 +1141,8 @@
     <Content Include="Views\Kategori\Details.cshtml" />
     <Content Include="Views\Kategori\Edit.cshtml" />
     <Content Include="Views\Kategori\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1148,10 +1154,14 @@
     <Folder Include="App_Data\" />
     <Folder Include="Uploads\Hizmet\" />
     <Folder Include="Uploads\Kimlik\" />
-    <Folder Include="Views\Blog\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202105091447554_InitialCreate.resx">
+      <DependentUpon>202105091447554_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
