@@ -20,6 +20,7 @@ namespace KurumsalWeb.Models.DataContext
         public DbSet<Iletisim>Iletisim { get; set; }
         public DbSet<Kategori> Kategori { get; set; }
         public DbSet<Kimlik> Kimlik { get; set; }
+        public DbSet<Slider> Slider { get; set; }
 
 
     }
